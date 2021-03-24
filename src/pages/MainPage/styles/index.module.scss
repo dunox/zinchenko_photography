@@ -1,0 +1,79 @@
+.hero{
+  display: flex;
+  max-height: 100vh;
+  overflow: hidden;
+  .title {
+    width: 100%;
+    padding-top: 30px;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+    h1 {
+      margin-left: 79px;
+      font-size: 56px;
+      color: #333;
+      span {
+        color: #fff;
+      }
+    }
+    p {
+      span{
+        font-size: 34px;
+        background: linear-gradient(to right,#333,#eee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  div.category {
+    position: relative;
+    width: 50%;
+    // transform: translateX(-140px);
+    ~.category {
+      // transform: translateX(140px);
+    }
+    .categoryPhoto {
+      width: 100%;
+      height: auto;
+      transition: all .4s ease-in-out;
+      position: relative;
+    }
+    .facebookIcon,
+    .instagramIcon {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      width: 34px;
+      transform: scale(1.2);
+    }
+    .facebookIcon {
+      left: 15px;
+      transform: scale(1);
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate( -50%, -50%);
+      font-size: 42px;
+      color: #fff;
+      font-weight: bold;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.5s, opacity 0.5s ease-in-out;
+    }
+    &:hover {
+      cursor: pointer;
+      span {
+        position: absolute;
+        visibility: visible;
+        opacity: 1;
+        z-index: 99;
+        text-align: center;
+      }
+      .categoryPhoto {
+        filter: blur(4px);
+      }
+    }
+  }
+}
